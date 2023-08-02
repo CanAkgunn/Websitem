@@ -1,0 +1,28 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+/* NAVBAR İÇİNDEKİ LİNKLER*/
+.navbar-brand, .nav-link {
+    color: white;
+    margin-left: 100px;
+    
+  }
+
+
+
+/* Özel stiller */
+header {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+
+
+/* Profil resmi yuvarlak yapma */
+.img-fluid {
+    border-radius: 50%;
+}

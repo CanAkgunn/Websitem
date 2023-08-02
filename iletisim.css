@@ -1,0 +1,68 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+/* arkaplan resmi */
+body {
+    background-image: url('https://cdn.create.vista.com/api/media/small/65575833/stock-photo-contact-us-keyboard-colorful');
+    background-size: cover;
+    background-position: center;
+  }
+
+
+/* NAVBAR İÇİNDEKİ LİNKLER*/
+  .navbar-brand, .nav-link {
+    color: white;
+    margin-left: 100px;
+  }
+
+
+
+
+/*İLETİŞİM FORMU*/
+  .iletisim {
+    width: 550px;
+    margin: 125px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+
+  
