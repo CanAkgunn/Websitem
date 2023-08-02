@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="anasayfa.css"> 
+</head>
+<body>
+
+ 
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MUSTAFACAN AKGÜN</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="anasayfa.html">Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="hakkımda.html">Hakkımda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="iletisim.html">İletişim</a>
+        </li>
+        <li class="nav-item dropdown mr-auto"> <!-- Buradaki ml-auto sınıfı ile sağa yasladık -->
+          <a class="nav-link dropdown-toggle ml-auto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            İçerik
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="sehrim.html">Şehrim</a></li>
+            <li><a class="dropdown-item" href="login.html">Login</a></li>
+            <li><a class="dropdown-item" href="#">Hobilerim</a></li>
+            <li><a class="dropdown-item" href="#">CV</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+<!-- BODY -->
+
+<div class="welcome-message bg-dark text-white text-center py-5">
+  <h1>Hoş Geldiniz!</h1>
+  <p>BU WEB SİTESİ MUSTAFACAN AKGÜN KİMDİR ? ONU ANLATIYOR. </p>
+  </div>
+
+
+
+
+
+
+
+<div class="container mt-5">
+  <div class="row">
+      <!-- Görsel Div Blok 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="image-box">
+            <img src="https://media.istockphoto.com/id/1294481615/tr/fotoğraf/ben-kimim.jpg?s=612x612&w=0&k=20&c=fmaEonTzPqLNdBD3D4yl8qiCoXu4rb1nuGOCjvIb6Vc=" alt="Resim 3" class="img-fluid">
+        </div>
+        <h3 class="mt-3">HAKKIMDA</h3>
+        <p>06.01.1998 İzmir Doğumlu Mustafacan AKGÜN Eski Anestezi Teknisyeni olup Dokuz Eylül Üniversite Hastanesinde memurken şu an Bilgisayar Mühendisliği 3.Sınıf Öğrencisidir. </p>
+        
+        <a href="hakkımda.html" class="btn btn-primary">Daha Fazla Bilgi</a>
+    </div>
+
+      <!-- Görsel Div Blok 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="image-box">
+            <img src="https://media.istockphoto.com/id/485947800/tr/fotoğraf/clock-tower-izmir.webp?b=1&s=170667a&w=0&k=20&c=Aldw60qS9PKifjfck2EDEbpORyrChpAuyjEW6ARdBig=" height="305" width="400" alt="Resim 3" >
+        </div>
+        <h3 class="mt-3">ŞEHRİM</h3>
+        <p>Zengin tarihi mirası ve antik kentleriyle, tarih ve kültür meraklıları için büyüleyici bir şehir olan İzmir aynı zamanda deniz, kum ve güneş tatili için mükemmel bir seçenektir.</p>
+        
+        <a href="sehrim.html" class="btn btn-primary">Daha Fazla Bilgi</a>
+    </div>
+
+      <!-- Görsel Div Blok 3 -->
+      <div class="col-md-4  mb-4">
+        <div class="image-box">
+            <img src="https://media.istockphoto.com/id/1323673133/tr/fotoğraf/cropped-shot-of-a-basketball-net-on-a-sunny-day-outside.webp?b=1&s=170667a&w=0&k=20&c=vPReW508udYUekGvWPmmQry4hnbGX1MULkT5XDDg8Sk=" height="305" width="400" alt="Resim 3">
+        </div>
+        <h3 class="mt-3">HOBİLERİM</h3>
+        <p>25.06.2008 Tarihinde Pınar Karşıyaka Spor Kulübünde Basketbol hayatıma başlayıp Buca Spor Kulübünde bölgesel lig seviyesinde noktaladım. Bunun yanı sıra tiyatro, münazara, yüzme, satranç, alanları ile ilgilendim </p>
+        
+        <a href="hobilerim.html" class="btn btn-primary">Daha Fazla Bilgi</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer class="footer fixed-bottom bg-dark text-white text-center mb-auto py-3 mt-5">
+  Telif Hakkı © 2023 Örnek Anasayfa. Tüm hakları saklıdır.
+</footer>
+
+
+
+
+
+</div> 
+
+<!--NAVBAR DROPDOWN-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $(".dropdown").on("show.bs.dropdown", function() {
+      $(this).find(".dropdown-menu").first().stop(true, true).slideDown(200); // Yavaş yavaş açma süresi: 200 milisaniye (0.2 saniye)
+    });
+
+    $(".dropdown").on("hide.bs.dropdown", function() {
+      $(this).find(".dropdown-menu").first().stop(true, true).slideUp(200); // Yavaş yavaş kapatma süresi: 200 milisaniye (0.2 saniye)
+    });
+  });
+</script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</html>
