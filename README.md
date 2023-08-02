@@ -1,2 +1,2 @@
 # Websitem
-kendimi anlattığım web sitem
+Kişisel Web Sitesi
