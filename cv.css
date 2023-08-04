@@ -1,0 +1,24 @@
+.navbar-brand, .nav-link {
+    color: white;
+    margin-left: 100px;
+    
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 20px;
+}
+.cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+.cv-header {
+    text-align: center;
+}
+.cv-section {
+    margin-bottom: 20px;
+}
