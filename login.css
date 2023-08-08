@@ -1,70 +1,79 @@
 
-/* NAVBAR İÇİNDEKİ LİNKLER*/
-.navbar-brand, .nav-link {
-    color: white;
-    margin-left: 100px;
+        body {
+            background-image: url('https://cdn.create.vista.com/api/media/small/65575833/stock-photo-contact-us-keyboard-colorful');
+            background-size: cover;
+            background-position: center;
+            padding-top: 60px;
+            margin: 0;
+        }
+
+        /* NAVBAR İÇİNDEKİ LİNKLER*/
+        .navbar-brand,
+        .nav-link {
+            color: white;
+            
+                margin-left: 100px;
+                
+              }
+        
+
+        /* Login Formu */
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .login-container h1 {
+            text-align: center;
+        }
+
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group button {
+            padding: 5px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
     
-  }
-
-
-
-
-/* Genel stiller */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.login-container {
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
-}
-
-input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-button {
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Arka plan resmi */
-body {
-    background-image: url('https://plus.unsplash.com/premium_photo-1685214580428-7eae1a78e7bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bG9naW4lMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    min-height: 100vh;
-}
