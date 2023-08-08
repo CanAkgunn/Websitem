@@ -1,68 +1,96 @@
+
 html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
-  }
+  
+}
+
 /* arkaplan resmi */
 body {
     background-image: url('https://cdn.create.vista.com/api/media/small/65575833/stock-photo-contact-us-keyboard-colorful');
     background-size: cover;
     background-position: center;
-  }
-
+}
 
 /* NAVBAR İÇİNDEKİ LİNKLER*/
-  .navbar-brand, .nav-link {
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar-brand,
+.nav-link {
     color: white;
     margin-left: 100px;
-  }
-
-
-
+    
+}
 
 /*İLETİŞİM FORMU*/
-  .iletisim {
-    width: 550px;
-    margin: 125px;
+.iletisim {
+    max-width: 400px;
+    margin: 0 auto;
     background-color: rgb(255, 255, 255);
     padding: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
-  }
-  
-  h2 {
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+h2 {
     text-align: center;
-  }
-  
-  form {
+}
+
+form {
     display: flex;
     flex-direction: column;
-  }
-  
-  label {
+}
+
+label {
     margin-bottom: 5px;
-  }
-  
-  input, textarea {
+}
+
+input,
+textarea {
     padding: 5px;
     margin-bottom: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  .button {
+}
+
+.button {
     padding: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #0056b3;
-  }
+}
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
-  
+@media (max-width: 768px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+.iletisim {
+    margin-top: 20px;
+}
