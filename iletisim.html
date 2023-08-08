@@ -1,108 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
     <link rel="stylesheet" href="iletisim.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    
+
 </head>
+
 <body>
-    
-<!--NAVBAR-->
+    <!--NAVBAR-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">MUSTAFACAN AKGÜN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hakkımda.html">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            İçerik
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="sehrim.html">Şehrim</a></li>
+                            <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="hobi.html">Hobilerim</a></li>
+                            <li><a class="dropdown-item" href="cv.html">CV</a></li>
+                            <li><a class="dropdown-item" href="miras.html">Mirasımız</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">MUSTAFACAN AKGÜN</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="anasayfa.html">Ana Sayfa</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="hakkımda.html">Hakkımda</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="iletisim.html">İletişim</a>
-        </li>
-        <li class="nav-item dropdown ml-auto"> <!-- Buradaki ml-auto sınıfı ile sağa yasladık -->
-          <a class="nav-link dropdown-toggle ml-auto" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            İçerik
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="sehrim.html">Şehrim</a></li>
-            <li><a class="dropdown-item" href="login.html">Login</a></li>
-            <li><a class="dropdown-item" href="#">Hobilerim</a></li>
-            <li><a class="dropdown-item" href="#">CV</a></li>
-          </ul>
-        </li>
-      </ul>
+    <!--iletişim formu-->
+    <div ng-app="myApp" ng-controller="FormController">
+        <div class="container mt-5">
+            <div class="iletisim">
+                <h1 class="text-center">İletişim Formu</h1>
+                <form action="iletisim.php" method="post" id="iletisimForm" name="iletisimForm" ng-submit="submitForm()" novalidate>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Adınız Soyadınız:</label>
+                                <input type="text" class="form-control" name="name" id="name" ng-model="formData.name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">E-posta Adresiniz:</label>
+                                <input type="email" class="form-control" id="email" name="email" ng-model="formData.email" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Cinsiyet:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="cinsiyet" id="kadin" value="kadin" ng-model="formData.cinsiyet" required>
+                            <label class="form-check-label" for="kadin">Kadın</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="cinsiyet" id="erkek" value="erkek" ng-model="formData.cinsiyet" required>
+                            <label class="form-check-label" for="erkek">Erkek</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>İlgi Alanlarınız:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="ilgi_alani[]" id="spor" value="spor" ng-model="formData.ilgi_alani.spor">
+                            <label class="form-check-label" for="spor">Spor</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="ilgi_alani[]" id="muzik" value="muzik" ng-model="formData.ilgi_alani.muzik">
+                            <label class="form-check-label" for="muzik">Müzik</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="ilgi_alani[]" id="sanat" value="sanat" ng-model="formData.ilgi_alani.sanat">
+                            <label class="form-check-label" for="sanat">Sanat</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sehir">Şehriniz:</label>
+                        <select class="form-control" name="sehir" id="sehir" ng-model="formData.sehir" required>
+                            <option value="">-- Şehir Seçin --</option>
+                            <!-- Şehirleri buraya eklemek için JavaScript kodunu kullandık -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesajınız:</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" ng-model="formData.message" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" name="gönder" ng-disabled="showMissingFieldsMessage || iletisimForm.$invalid">Gönder</button>
+                        <button type="button" class="btn btn-secondary" ng-click="clearForm()">Temizle</button>
+                    </div>
+                    <p class="text-danger text-center mt-3" ng-show="showMissingFieldsMessage">Doldurmak zorunludur.</p>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-</nav>
+
+    <!--FOOTER-->
+    <footer class="footer bg-dark text-white text-center py-3 mt-5">
+        <p>Mustafacan AKGÜN</p>
+    </footer>
+
+    <!--NAVBAR DROPDOWN-->
+    <script>
+        $(document).ready(function() {
+            $(".dropdown").on("show.bs.dropdown", function() {
+                $(this).find(".dropdown-menu").first().stop(true, true).slideDown(200); // Yavaş yavaş açma süresi: 200 milisaniye (0.2 saniye)
+            });
+
+            $(".dropdown").on("hide.bs.dropdown", function() {
+                $(this).find(".dropdown-menu").first().stop(true, true).slideUp(200); // Yavaş yavaş kapatma süresi: 200 milisaniye (0.2 saniye)
+            });
+        });
+    </script>
+
+    <script>
+        // JavaScript ile Türkiye şehirleri combobox'a eklemek
+        var sehirler = ["Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin", "Aydın", "Balıkesir", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkari", "Hatay", "Isparta", "Mersin", "İstanbul", "İzmir", "Kars", "Kastamonu", "Kayseri", "Kırklareli", "Kırşehir", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Kahramanmaraş", "Mardin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Şanlıurfa", "Uşak", "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt", "Karaman", "Kırıkkale", "Batman", "Şırnak", "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce"];
+
+        var select = document.getElementById("sehir");
+        for (var i = 0; i < sehirler.length; i++) {
+            var option = document.createElement("option");
+            option.text = sehirler[i];
+            option.value = sehirler[i];
+            select.appendChild(option);
+        }
+    </script>
+
+    <!--JavaScript ile form eleman temizleme-->
+    <script>
+        function clearForm() {
+            document.getElementById("iletisimForm").reset();
+        }
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Popper.js  Angular.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
 
 
-
- 
-<!--iletişim formu-->
-    <div class="iletisim">
-      <h2>İletişim Formu</h2>
-
-      
-        <form action="iletisim.php" method="post">
-          <label for="name">Adınız:</label>
-          <input type="text" id="name" name="name" required><br>
-  
-          <label for="email">E-posta Adresiniz:</label>
-          <input type="email" id="email" name="email" required><br>
-  
-          <label for="message">Mesajınız:</label>
-          <textarea id="message" name="message" rows="4" required></textarea><br>
-  
-          <input type="submit" value="Gönder">
-      </form>
-
-
-      <!--FOOTER-->
-      <footer class="footer fixed-bottom bg-dark text-white text-center mb-auto py-3 mt-5">
-        Telif Hakkı © 2023 Örnek Anasayfa. Tüm hakları saklıdır.
-      </footer>
-   
-
-
-
-
-<!--NAVBAR DROPDOWN-->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).ready(function() {
-    $(".dropdown").on("show.bs.dropdown", function() {
-      $(this).find(".dropdown-menu").first().stop(true, true).slideDown(200); // Yavaş yavaş açma süresi: 200 milisaniye (0.2 saniye)
-    });
-
-    $(".dropdown").on("hide.bs.dropdown", function() {
-      $(this).find(".dropdown-menu").first().stop(true, true).slideUp(200); // Yavaş yavaş kapatma süresi: 200 milisaniye (0.2 saniye)
-    });
-  });
-</script>
-
-
-
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Popper.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
