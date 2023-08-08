@@ -1,12 +1,27 @@
-.navbar-brand, .nav-link {
-    color: white;
-    margin-left: 100px;
-    
-  }
 
-  body {
-    background-color: rgb(116, 111, 111);
-    color: rgb(255, 255, 255); 
     
-  }
- 
+    .navbar-brand, .nav-link {
+      color: white;
+      margin-left: 100px;
+      
+    }
+    .rounded-circle {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .section-heading {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .section-heading h1 {
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .section-content {
+      text-align: justify;
+    }
+
